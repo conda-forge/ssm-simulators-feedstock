@@ -20,7 +20,7 @@ requirements:
     - {{ compiler('c') }}
     - cython
   host:
-    - python``
+    - python
     - setuptools
     - wheel
     - cython
