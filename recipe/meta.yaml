@@ -10,7 +10,7 @@ source:
   sha256: fab8462525dce9cf3e93b32f5103423ea3d001e68d4f423ed9199ef27951e195
 
 build:
-  skip: true  # [py<=39 or py>=313 or py2k]
+  skip: true  # [py<=39 or py>=312 or py2k]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -33,6 +33,7 @@ requirements:
     - pip
   run:
     - python
+    - numpy >=1.26.4
     - scipy >=1.6.3
     - pandas >=1.0.0
     - scikit-learn >=0.24.0
