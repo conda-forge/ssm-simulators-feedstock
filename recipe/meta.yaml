@@ -10,7 +10,7 @@ source:
   sha256: fab8462525dce9cf3e93b32f5103423ea3d001e68d4f423ed9199ef27951e195
 
 build:
-  skip: true  # [py<=39 or py>=312 or py2k]
+  skip: true  # [py<=39 or py>313 or py2k]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -19,7 +19,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
+    - numpy >=1.26.4, <2.0.0                 # [build_platform != target_platform]
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
@@ -29,7 +29,7 @@ requirements:
     - setuptools
     - wheel
     - cython
-    - numpy
+    - numpy >=1.26.4, <2.0.0
     - pip
   run:
     - python
