@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ssm_simulators-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ssm_simulators-{{ version }}.tar.gz
   sha256: f4e312f75418103cbd6fa5fc74561f30d3a75b54816c8ddbfaa17982e53cd029
 
 build:
@@ -41,7 +41,7 @@ requirements:
     - pathos >=0.3.0
     - typer >=0.15.3
     - pyyaml >=6.0.2
-    - matplotlib
+    - matplotlib-base
 
 test:
   imports:
