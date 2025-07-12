@@ -33,7 +33,6 @@ requirements:
     - pip
   run:
     - python
-    - cython
     - numpy >=2.0
     - scipy >=1.6.3
     - pandas >=1.0.0
