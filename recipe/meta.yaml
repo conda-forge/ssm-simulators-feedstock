@@ -1,5 +1,5 @@
 {% set name = "ssm-simulators" %}
-{% set version = "0.10.2" %}
+{% set version = "0.10.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ssm_simulators-{{ version }}.tar.gz
-  sha256: aad68e5e8b3759d8f9063836192fce9fcbf873a005e28b0d8d19e6730863d065
+  sha256: e2ea9bbf75e6c89c33ef53616fd6700e74810e112447a5507c512bf4b6bdd4c6
 
 build:
   skip: true  # [py<=39 or py>=313 or py2k]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
