@@ -42,6 +42,7 @@ requirements:
     - typer >=0.15.3
     - pyyaml >=6.0.2
     - matplotlib-base
+    - tqdm
 
 test:
   imports:
