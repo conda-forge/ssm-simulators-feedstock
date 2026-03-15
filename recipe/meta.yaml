@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - llvm-openmp  # [osx]
     - cython
   host:
     - python
@@ -30,6 +31,7 @@ requirements:
     - wheel
     - cython
     - numpy
+    - gsl
     - pip
   run:
     - python
@@ -43,6 +45,10 @@ requirements:
     - pyyaml >=6.0.2
     - matplotlib-base
     - tqdm
+    - llvm-openmp  # [osx]
+    - libgomp  # [linux]
+    - vcomp14  # [win]
+    - gsl
 
 test:
   imports:
