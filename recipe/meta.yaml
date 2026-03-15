@@ -49,6 +49,7 @@ requirements:
     - libgomp  # [linux]
     - vcomp14  # [win]
     - gsl
+    - libopenblas  # [linux]
 
 test:
   imports:
