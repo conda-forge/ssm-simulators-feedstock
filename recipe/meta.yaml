@@ -50,6 +50,7 @@ requirements:
     - vcomp14  # [win]
     - gsl
     - libopenblas  # [linux]
+    - cloudpickle
 
 test:
   imports:
