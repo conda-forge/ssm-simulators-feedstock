@@ -1,5 +1,5 @@
 {% set name = "ssm-simulators" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ssm_simulators-{{ version }}.tar.gz
-  sha256: f49040d6a186daa51db98f73111e17b2edcfae1a39a9ce6a9d29176ba4cf4283
+  sha256: a66839001d13cc53a88ae08e9b94d2a70d1988635c9c3aeda428c952314ab065
 
 build:
   skip: true  # [py<=310 or py>=314 or py2k]
@@ -50,6 +50,7 @@ requirements:
     - vcomp14  # [win]
     - gsl
     - libopenblas  # [linux]
+    - cloudpickle
 
 test:
   imports:
